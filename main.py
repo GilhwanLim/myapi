@@ -19,7 +19,7 @@ def about(limit =10, published : bool =True, sort : Optional[str]=None): #위에
     #정수형 변수만 쓰고 싶다면 변수 뒤에 :int를 붙여준다!!!
 
     if published:
-        return{'data':f'{limit} published blogs from the db'}
+        return{'data':f'{limit} published blogs from the pipdb'}
     else:
         return{'data':f'{limit} blogs from the db'}
 @app.get('/blog/unpublished')
@@ -45,3 +45,5 @@ def create_blog(request:Blog):
 
 #terminal에서 main.py가 파일일 때 uvicorn main:app을 사용
 #terminal에서 beautiful.py가 파일일 때 uvicorn beautiful:app을 사용
+
+print("Hello world!")
